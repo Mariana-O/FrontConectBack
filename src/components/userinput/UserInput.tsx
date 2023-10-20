@@ -2,12 +2,12 @@ import React from "react";
 import axios from "axios";
 import './UserInput.css'
 
-function userData(){
+async function userData(){
     var userNameInput = document.getElementById("userName") as HTMLInputElement || null;
     var userLastNameInput = document.getElementById("userLastName") as HTMLInputElement || null;
     var userEmailInput = document.getElementById("userEmail") as HTMLInputElement || null;
     var userCpfInput = document.getElementById("userCpf") as HTMLInputElement || null;
-    var newDiv = document.getElementById("newDiv") as HTMLDivElement;
+    // var newDiv = document.getElementById("newDiv") as HTMLDivElement;
     var userUrl = "http://localhost:4000/api/user";
     
     var userDataJson = {
@@ -17,31 +17,47 @@ function userData(){
         "cpf" : userCpfInput.value.toString()
     }
 
-//     newDiv.innerHTML = `
-//   <div> 
-//       Nome: ${userNameInput.value} 
-//    </div>
-
-//     <div> 
-//      Sobrenome: ${userLastNameInput.value} 
-//     </div>
-
-//     <div> 
-//       Email: ${userEmailInput.value} 
-//     </div>
-
-//      <div> 
-//        CPF: ${userCpfInput.value} 
-//     </div>
-// `
-
-axios.get(userUrl)
+await axios.get(userUrl)
 .then((response) => {
-    Object.keys((response.data))
- newDiv.innerHTML = `${Object.keys(response.data.name[1])} <br/> ${response.data.cpf} <br/> ${response.data.last_name}  <br/> ${response.data.email}`
-   
+ const dataUser: Record<string, {name: String, cpf:String, 
+    last_name: String, email: String}> = response.data;
+
+    const dataUserArray = Object.entries(dataUser).map(
+        ([key, value]) => ({
+        key,
+         ...value
+
+}));
+console.log(dataUserArray);
+dataUserArray.forEach((i) => {
+const newDiv = document.createElement("div");
+ newDiv.innerHTML = `${i.name}
+  <br/> ${i.cpf}
+  <br/> ${i.last_name}
+  <br/> ${i.email} <br/><br/></br>` 
+document.body.appendChild(newDiv);
+});
 })
 }
+
+async function userDataPost(){
+    const userUrl = "http://localhost:4000/api/user";
+    var userJson = {"name": "maria",
+    "cpf": "12345678",
+    "last_name": "Camargo",
+    "email": "teste@gmail.com"}
+
+    await axios.post(userUrl, userJson,
+    {
+        headers: { "Content-Type": "application/json" }
+    }
+    
+    ).then((response) => {
+        console.log(response);
+    })
+}
+
+       
 
 function UserInput(){
     return(
@@ -49,7 +65,6 @@ function UserInput(){
     <div className="userInputBody">
       <label>Nome: </label>
          <input type="text" id="userName"/>
-      
    </div>    
    
     <div className="userInputBody"> 
@@ -68,12 +83,13 @@ function UserInput(){
    </div>
 
     <div>
-        <button onClick={userData} id="sndBtn">Enviar</button>
+    <button onClick={userDataPost} id="sndBtn">Enviar</button>
+    <button onClick={userData} id="sndBtn">Obter</button>
     </div>
 
     <br/><br/><br/><br/>
 
-    <div id = "newDiv"></div>
+    {/* <div id = "newDiv"></div> */}
      
 </div>
     )
