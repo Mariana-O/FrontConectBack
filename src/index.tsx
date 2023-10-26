@@ -2,14 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import UserInput from './components/userinput/UserInput';
+import Navbar from './components/navbar/Navbar';
+import MainImage from './components/mainimage/PlaceH';
+import Card from './components/card/Card';
+import LoginButton from './components/login/LoginLogoButton';
+//import UserInput from './components/userinput/UserInput';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <UserInput/>
+    {/* <LoginButton/>
+    <Navbar
+    Nav1='Home'
+    Nav2='Cadastro de Usuários'
+    Nav3='Cadastro de Produtos'
+    Nav4='Cadastro de vendas'/>
+    <MainImage/> */}
+    <Card/>
   </React.StrictMode>
 );
 

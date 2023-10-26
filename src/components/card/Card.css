@@ -1,0 +1,14 @@
+.CardHead {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px; 
+    width: 100%;
+    color: #333;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+/* .CardBody {
+    padding: 15px;
+    border: 1px solid #ddd;
+} */

@@ -48,8 +48,10 @@ async function userDataPost(){
     "email": "teste@gmail.com"}
 
     await axios.post(userUrl, userJson,
-    {
-        headers: { "Content-Type": "application/json" }
+    {   withCredentials: true,
+        headers: { "Content-Type": "application/json"
+     },
+     maxRedirects: 0,
     }
     
     ).then((response) => {

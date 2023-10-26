@@ -1,0 +1,14 @@
+.headIcons {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.icon-logo img {
+   max-width: 200px;
+}
+
+.icon-login img {
+    max-width: 30px;
+    margin: 0 30px;
+}

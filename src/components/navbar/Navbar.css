@@ -1,0 +1,29 @@
+a{
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+}
+.navName {
+    max-width: 100px;
+    margin: 0 0 0 50px;
+    font-size: 20px;
+}
+
+.navbar { 
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: #333;
+border: 1px solid #ddd;
+}
+
+
+.nav-links {
+display: flex;
+gap: 30px;
+margin: 10px 20px 10px 0;
+}
+.icon-login {
+   flex-wrap: end;
+} 
+
