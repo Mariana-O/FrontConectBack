@@ -2,12 +2,66 @@ a{
     color: #333;
     text-decoration: none;
     font-size: 20px;
+    max-width: 100%;
 }
-.navName {
+.navfilho {
     max-width: 100px;
     margin: 0 0 0 50px;
     font-size: 20px;
 }
+
+/* .navfilho span {
+    background-color:rgba(129, 122, 126, 0.3);
+    border-radius: 12px;
+    padding: 0 10px;
+} */
+
+/* .navfilho span{
+    position: relative;
+    z-index: 3;
+  }
+  
+  .navfilho::before{
+    content: "";
+  
+    width: calc(100% + 2px);
+    height: calc(100% - 12px);
+  
+    position: absolute;
+    top: 6px;
+    left: -1px;
+  
+    background: #323232;
+  
+    transition: .5s ease-in-out;
+    transform: scaleY(1);
+  }
+  
+  .navfilho:hover::before{
+    transform: scaleY(0);
+  }
+  
+  .navfilho::after{
+    content: "";
+  
+    width: calc(100% - 12px);
+    height: calc(100% + 4px);
+  
+    position: absolute;
+    top: -2px;
+    left: 6px;
+  
+    background: #323232;
+  
+    transition: .5s ease-in-out;
+    transform: scaleX(1);
+  }
+  
+  .navfilho:hover::after{
+    transform: scaleX(0);
+  } */
+
+
 
 .navbar { 
 display: flex;
@@ -15,6 +69,7 @@ justify-content: space-between;
 align-items: center;
 color: #333;
 border: 1px solid #ddd;
+max-width: 100%;
 }
 
 
@@ -22,8 +77,18 @@ border: 1px solid #ddd;
 display: flex;
 gap: 30px;
 margin: 10px 20px 10px 0;
+max-width: 100%;
 }
+
+.navfilho:hover {
+    background-color:rgba(129, 122, 126, 0.3);
+    font-size: 20px;
+    border-radius: 12px;
+    padding: 0 10px;
+}
+
 .icon-login {
    flex-wrap: end;
+   max-width: 100%;
 } 
 

@@ -11,7 +11,7 @@ function LoginButton(){
         <img src={Logo}/>
     </div>
   <div className="icon-login">
-        <img src={Login}/>
+        <a href="https://www.deco.cx/hackathon4" target="_blank"><img src={Login}/></a>
   </div>
   </div>
 

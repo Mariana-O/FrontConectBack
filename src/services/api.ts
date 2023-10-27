@@ -7,7 +7,6 @@ async function getProducts(divId:HTMLDivElement) {
 //  const productDescription = document.getElementById("productDescription") as HTMLInputElement || null;
 //  const productPrice = document.getElementById("productPrice ") as HTMLInputElement || null;
 //divId = document.getElementById("mainCard") as HTMLDivElement;
-const teste = document.getElementById("teste") as HTMLDivElement;
  const productUrl= "http://localhost:4000/api/products";    
 
 
@@ -21,8 +20,8 @@ const teste = document.getElementById("teste") as HTMLDivElement;
     .then((response) => {
     const dataProduct: Record<string, 
     {name: String,
-    factory:String, 
-    quantity: number}> = response.data;
+    description:String, 
+    price: number}> = response.data;
 
     const dataProductArray = Object.entries(dataProduct).map(
         ([key, value]) => ({
@@ -37,8 +36,11 @@ const teste = document.getElementById("teste") as HTMLDivElement;
           component += `
             <div class="CardBody">
               <img src="https://placehold.co/200/000000/FFFFFF.png"/>
-                <div class="description">${product.name}</div> 
-                <div class="price">${product.quantity}</div>
+                <div class="Pname">${product.name}</div> 
+                <div class="Pdescription">${product.description}</div> 
+                <div class="Pprice">R$${product.price}</div>
+                <button >Comprar</button>
+               </div>
         `
 
           console.log("Content", component)

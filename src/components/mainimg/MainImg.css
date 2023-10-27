@@ -1,0 +1,6 @@
+.mainImg {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    max-width: 100%;
+}
