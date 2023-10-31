@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Navbar from './components/navbar/Navbar';
-import Card from './components/card/Card';
-import LoginButton from './components/login/LoginLogoButton';
-import MainImg from './components/mainimg/MainImg';
+//import Card from './components/card/Card';
+//import LoginButton from './components/login/LoginLogoButton';
 //import UserInput from './components/userinput/UserInput';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Card from './components/card/Card';
+import Home from './components/home/Home';
+import CadastroUsuario from './components/cadastrousuarios/CadastroUsuario';
+import CadastroProduto from './components/cadastroproduto/CadastroProdutos';
+import CadastroVendas from './components/cadastrovendas/CadastroVendas';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,14 +18,15 @@ const root = ReactDOM.createRoot(
 root.render(
   // <React.StrictMode>
   <>
-    <LoginButton/>
-    <Navbar
-    Nav1='Home'
-    Nav2='Cadastro de Usuários'
-    Nav3='Cadastro de Produtos'
-    Nav4='Cadastro de vendas'/>
-    <MainImg/>
-    <Card/>
+    <BrowserRouter basename='/pi'>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/usuarios' element={<CadastroUsuario/>}/>
+        <Route path='/produtos' element={<CadastroProduto/>}/>
+        <Route path='/vendas' element={<CadastroVendas/>}/>
+        <Route path='*' element={<Card/>}/>
+      </Routes>
+    </BrowserRouter>
   {/* </React.StrictMode> */}
   </>
 );
