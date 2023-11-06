@@ -1,30 +1,26 @@
 import React from "react"
-import './Cadastros.css'
+import './CadastroVendas.css'
 
 
 function CadastroVendas(){
     return(
-        <div className="CardPai">
-            <div className="CardFilho">
-                <input placeholder="Usuário"/>
+            <div className="Cards">
+                <div className="CardInput">
+                    <input placeholder="Usuário"/>
+                </div>
+                <div className="CardInput">
+                     <input placeholder="Produto"/>
+                </div>
+                <div className="CardInput">
+                    <input placeholder="Preço"/>
+                </div>
+                <div className="CardInput">
+                     <input placeholder="Desconto"/>
+                </div>
+                <div className="CardInput">
+                    <input placeholder="Valor Final"/>
+                </div>
             </div>
-            <div className="CardFilho">
-                 <input placeholder="Produto"/>
-            </div>
-            <div className="CardFilho">
-                 <input placeholder="Preço"/>
-            </div>
-            <div className="CardFilho">
-                 <input placeholder="Desconto"/>
-            </div>
-            <div className="CardFilho">
-                 <input placeholder="Valor Final"/>
-            </div>
-            <div className="CardFilho">
-                <input placeholder="Venda"/>
-            </div>
-          
-        </div>
 
     )
 }

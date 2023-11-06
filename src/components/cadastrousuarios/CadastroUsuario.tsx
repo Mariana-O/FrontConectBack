@@ -1,23 +1,25 @@
 import React from "react"
-import './CadastroUsuario.css'
+import './CadastroUsuarios.css'
 
-function CadastroUsuario(){
+function CadastroUsuarios(){
     return(
-        <div className="CardPai">
-            <div className="CardFilho">
-              <input placeholder="Nome"/> 
+       
+        <div className="Cards">
+             <div className="CardInput">
+                    <input placeholder="Nome"/> 
+             </div>
+            <div className="CardInput">
+                    <input placeholder="Sobrenome"/>
             </div>
-            <div className="CardFilho">
-                <input placeholder="Sobrenome"/>
+            <div className="CardInput">
+                    <input placeholder="CPF"/>
             </div>
-            <div className="CardFilho">
-                <input placeholder="CPF"/>
-            </div>
-            <div className="CardFilho">
-                <input placeholder="Email"/>
-            </div>
+            <div className="CardInput">
+                    <input placeholder="Email"/>
+           </div>
         </div>
+   
     )
 }
 
-export default CadastroUsuario;
+export default CadastroUsuarios;

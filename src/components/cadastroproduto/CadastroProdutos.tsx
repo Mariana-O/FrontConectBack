@@ -1,18 +1,18 @@
 import React from "react"
-import './Cadastros.css'
+import './CadastroProduto.css'
 
 
 
 function CadastroProduto(){
     return(
-        <div className="CardHead">
-            <div className="CardBody">
+        <div className="Cards">
+            <div className="CardInput">
                 <input placeholder="Nome"/>
             </div>
-            <div className="CardBody">
+            <div className="CardInput">
                 <input placeholder="Descrição"/>
             </div>
-            <div className="CardBody">
+            <div className="CardInput">
                 <input placeholder="Preço"/>
             </div>
         </div>

@@ -1,0 +1,26 @@
+.Cards{
+    display: flex;
+    min-width: 100vw;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.CardInput{
+  color: black;
+  background-color: #ddd;
+  text-align: start;
+  align-items: start;
+  padding:20px;
+}
+
+input {
+    border: none;
+    align-items: start;
+    align-self: start;
+    padding: 15px 65px 15px 65px;
+    text-align: center;
+    margin: 10px;
+}
