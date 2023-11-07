@@ -18,7 +18,7 @@ const root = ReactDOM.createRoot(
 root.render(
   // <React.StrictMode>
   <>
-    <BrowserRouter basename='/pi'>
+    <BrowserRouter basename='/app'>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/usuarios' element={<CadastroUsuario/>}/>
@@ -27,8 +27,8 @@ root.render(
         <Route path='*' element={<Card/>}/>
       </Routes>
     </BrowserRouter>
-  {/* </React.StrictMode> */}
   </>
+   /* </React.StrictMode> */
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -13,7 +13,7 @@
   background-color: #ddd;
   text-align: start;
   align-items: start;
-  padding:20px;
+  padding: 20px;
 }
 
 input {
@@ -24,3 +24,9 @@ input {
     text-align: center;
     margin: 10px;
 }
+
+/* .pointerRemove {
+  pointer-events: none;
+  color: #333;
+  text-decoration: none;
+} */

@@ -1,8 +1,8 @@
-Link {
-    color: #333;
-    text-decoration: none;
+a {
+    /* color: #333; */
     font-size: 20px;
     max-width: 100%;
+    
 }
 .navfilho {
     max-width: 100%;
@@ -10,13 +10,21 @@ Link {
     font-size: 15px;
 } 
 
+/* a{
+    margin: 30px;
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+    max-width: 100%;
+} */
+
 .navbar { 
 display: flex;
 justify-content: space-between;
 align-items: center;
 color: #333;
-border: 1px solid #ddd;
-max-width: 100%;
+border-top: 1px solid #ddd;
+border-bottom: 1px solid #ddd;
 }
 
 
@@ -38,4 +46,12 @@ max-width: 100%;
    flex-wrap: end;
    max-width: 100%;
 } 
+
+.pointerRemove {
+    pointer-events: none;
+    color: #333;
+    text-decoration: none;
+}
+
+
 
